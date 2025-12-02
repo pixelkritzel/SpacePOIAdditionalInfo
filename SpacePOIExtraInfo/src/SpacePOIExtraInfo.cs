@@ -238,7 +238,7 @@ namespace SpacePOIExtraInfo
                     if (artifactPrefab == null)
                         return;
 
-                    bool canHarvestArtifact = smi.CanHarvestArtifact();
+                    bool canHarvestArtifact = smi.HasArtifactAvailableInHexCell();
 
                     HierarchyReferences refs = artifactRow.GetComponent<HierarchyReferences>();
                     refs.GetReference<LocText>("NameLabel").text = artifactPrefab.GetProperName();
